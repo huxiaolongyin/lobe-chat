@@ -27,8 +27,8 @@ services:
     environment:
       - 'MINIO_ROOT_USER=1453366421@qq.com'
       - 'MINIO_ROOT_PASSWORD=Aa@123456'
-      - 'MINIO_DOMAIN=lobe-s3-api.zhengjiajun.top'
-      - 'MINIO_API_CORS_ALLOW_ORIGIN=https://lobe.zhengjiajun.top/' # Your LobeChat's domain name.
+      - 'MINIO_DOMAIN=lobe-s3-api.zhengjiajun.xyz'
+      - 'MINIO_API_CORS_ALLOW_ORIGIN=https://lobe.zhengjiajun.xyz/' # Your LobeChat's domain name.
     restart: always
     command: >
       server /etc/minio/data --address ":9000" --console-address ":9001"
@@ -45,8 +45,8 @@ services:
     environment:
       - 'TRUST_PROXY_HEADER=1'
       - 'DB_URL=postgresql://postgres:uWNZugjBqixf8dxC@postgresql:5432/logto'
-      - 'ENDPOINT=https://lobe-auth-api.zhengjiajun.top/'
-      - 'ADMIN_ENDPOINT=https://lobe-auth-ui.zhengjiajun.top/'
+      - 'ENDPOINT=https://lobe-auth-api.zhengjiajun.xyz/'
+      - 'ADMIN_ENDPOINT=https://lobe-auth-ui.zhengjiajun.xyz/'
     entrypoint: ['sh', '-c', 'npm run cli db seed -- --swe && npm start']
 
   lobe:
